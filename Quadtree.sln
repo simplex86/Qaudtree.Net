@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quadtree.Net", "Quadtree.Net\Quadtree.Net.csproj", "{74D4C4EB-0E7E-4FA6-B220-7FCFD09D1898}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74D4C4EB-0E7E-4FA6-B220-7FCFD09D1898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74D4C4EB-0E7E-4FA6-B220-7FCFD09D1898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74D4C4EB-0E7E-4FA6-B220-7FCFD09D1898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74D4C4EB-0E7E-4FA6-B220-7FCFD09D1898}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC4BE43F-AF9E-4925-9C94-DDC4DC104C5C}
+	EndGlobalSection
+EndGlobal
