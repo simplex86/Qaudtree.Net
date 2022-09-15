@@ -115,7 +115,7 @@ namespace SimpleX.Quadtree.App
             var y = random.Next(30, H - 30);
             var w = random.Next(10, 40);
             var h = random.Next(10, 40);
-            var s = random.Next(5, 30);
+            var s = random.Next(10, 40);
 
             var agent = new Agent(x, y, w, h, s);
 

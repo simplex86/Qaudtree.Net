@@ -15,7 +15,7 @@ namespace SimpleX.Collision2D.Engine
         private List<T> objects = null;
 
         public Quadtree(float x, float y, float width, float height)
-            : this(x, y, width, height, 10)
+            : this(x, y, width, height, 8)
         {
 
         }
@@ -59,11 +59,7 @@ namespace SimpleX.Collision2D.Engine
             {
                 for (int i = 0; i < nodes.Length; i++)
                 {
-                    var node = nodes[i];
-                    //if (node.nodes != null)
-                    {
-                        node.Clear();
-                    }
+                    nodes[i].Clear();
                 }
                 nodes = null;
             }
