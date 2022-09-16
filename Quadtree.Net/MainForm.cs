@@ -5,10 +5,8 @@ using System.Drawing.Drawing2D;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SimpleX.Quadtree.App
+namespace SimpleX
 {
-    using SimpleX.Collision2D.Engine;
-
     public partial class MainForm : Form
     {
         public MainForm()

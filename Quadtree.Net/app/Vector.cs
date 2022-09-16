@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SimpleX.Quadtree.App
+namespace SimpleX
 {
     struct Vector
     {

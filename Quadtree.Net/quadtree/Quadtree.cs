@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SimpleX.Collision2D.Engine
+namespace SimpleX
 {
     public class Quadtree<T> where T : IQuadObject
     {

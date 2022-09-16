@@ -1,4 +1,4 @@
-﻿namespace SimpleX.Quadtree.App
+﻿namespace SimpleX
 {
     partial class MainForm
     {

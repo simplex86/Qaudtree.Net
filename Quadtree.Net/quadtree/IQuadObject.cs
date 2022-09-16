@@ -1,4 +1,4 @@
-﻿namespace SimpleX.Collision2D.Engine
+﻿namespace SimpleX
 {
     public interface IQuadObject
     {

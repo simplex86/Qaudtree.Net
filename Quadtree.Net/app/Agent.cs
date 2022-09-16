@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Drawing;
 
-namespace SimpleX.Quadtree.App
+namespace SimpleX
 {
-    using SimpleX.Collision2D.Engine;
-
     class Agent : IQuadObject
     {
         public float x { get; set; }
