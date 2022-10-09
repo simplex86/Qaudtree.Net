@@ -10,25 +10,30 @@ namespace SimpleX
         public float width { get; private set; }
         public float height { get; private set; }
         public int capacity { get; private set; }
+        public int maxDepth { get; private set; }
 
         public Quadtree<T>[] nodes { get; private set; } = null;
+
         private List<T> objects = null;
+        private int curDepth = 0;
 
         public Quadtree(float x, float y, float width, float height)
-            : this(x, y, width, height, 8)
+            : this(x, y, width, height, 8, 6)
         {
 
         }
 
-        public Quadtree(float x, float y, float width, float height, int capacity)
+        public Quadtree(float x, float y, float width, float height, int capacity, int depth)
         {
             this.x = x;
             this.y = y;
             this.width = width;
             this.height = height;
             this.capacity = capacity;
+            this.maxDepth = depth;
 
             objects = new List<T>(capacity);
+            curDepth = 0;
         }
 
         private List<int> GetIndex(T o)
@@ -75,7 +80,7 @@ namespace SimpleX
             else
             {
                 objects.Add(o);
-                if (objects.Count > capacity)
+                if (objects.Count > capacity && curDepth < maxDepth)
                 {
                     Split();
                     foreach (var v in objects)
@@ -103,10 +108,22 @@ namespace SimpleX
 
             nodes = new Quadtree<T>[4]
             {
-                new Quadtree<T>(x + w * 0.5f, y + h * 0.5f, w, h, capacity),
-                new Quadtree<T>(x - w * 0.5f, y + h * 0.5f, w, h, capacity),
-                new Quadtree<T>(x - w * 0.5f, y - h * 0.5f, w, h, capacity),
-                new Quadtree<T>(x + w * 0.5f, y - h * 0.5f, w, h, capacity),
+                new Quadtree<T>(x + w * 0.5f, y + h * 0.5f, w, h, capacity, maxDepth)
+                {
+                    curDepth = curDepth + 1
+                },
+                new Quadtree<T>(x - w * 0.5f, y + h * 0.5f, w, h, capacity, maxDepth)
+                {
+                    curDepth = curDepth + 1
+                },
+                new Quadtree<T>(x - w * 0.5f, y - h * 0.5f, w, h, capacity, maxDepth)
+                {
+                    curDepth = curDepth + 1
+                },
+                new Quadtree<T>(x + w * 0.5f, y - h * 0.5f, w, h, capacity, maxDepth)
+                {
+                    curDepth = curDepth + 1
+                },
             };
         }
 

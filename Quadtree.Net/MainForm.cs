@@ -27,9 +27,9 @@ namespace SimpleX
 
         private void OnLoadHandler(object sender, EventArgs e)
         {
-            quadtree = new Quadtree<Agent>(W * 0.5f, H * 0.5f, W, H);
+            quadtree = new Quadtree<Agent>(W * 0.5f, H * 0.5f, W, H, 5, 6);
 
-            for (int i=0; i<200; i++)
+            for (int i=0; i<500; i++)
             {
                 var agent = CreateRandomAgent();
                 agents.Add(agent);
@@ -111,9 +111,9 @@ namespace SimpleX
         {
             var x = random.Next(30, W - 30);
             var y = random.Next(30, H - 30);
-            var w = random.Next(10, 40);
-            var h = random.Next(10, 40);
-            var s = random.Next(10, 40);
+            var w = random.Next(10, 20);
+            var h = random.Next(10, 20);
+            var s = random.Next(10, 30);
 
             var agent = new Agent(x, y, w, h, s);
 
